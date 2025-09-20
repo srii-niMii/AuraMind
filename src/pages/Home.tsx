@@ -71,7 +71,7 @@ export default function Home() {
               stigma-free environment.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 mb-12">
+            <div className="flex flex-col sm:flex-row gap-4 mb-12 justify-center">
               <Link to="/chat">
                 <Button size="lg" className="w-full sm:w-auto text-lg px-8 py-6">
                   <MessageCircle className="mr-3 h-5 w-5" />

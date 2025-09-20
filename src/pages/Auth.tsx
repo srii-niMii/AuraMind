@@ -41,13 +41,13 @@ export default function Auth() {
   return <div className="min-h-screen bg-gradient-hero flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         {/* Logo */}
-        <div className="text-center mb-8 bg-[#4594b8]">
+        <div className="text-center mb-8 bg-[#438cae]">
           <Link to="/" className="inline-flex items-center space-x-3">
             <div className="w-12 h-12 bg-white/20 backdrop-blur rounded-full flex items-center justify-center">
               <Heart className="w-6 h-6 text-white" />
             </div>
             <div className="text-white">
-              <h1 className="text-2xl font-bold">MindCare</h1>
+              <h1 className="text-2xl font-bold">AuraMind</h1>
               <p className="text-sm opacity-90">Student Support</p>
             </div>
           </Link>
@@ -183,11 +183,6 @@ export default function Auth() {
                     By signing up, you agree to our privacy policy and terms of service.
                     All your data is encrypted and confidential.
                   </p>
-                  <div className="flex justify-center">
-                    <Badge variant="secondary" className="text-xs">
-                      🛡️ HIPAA Compliant & Secure
-                    </Badge>
-                  </div>
                 </div>
               </TabsContent>
             </Tabs>
