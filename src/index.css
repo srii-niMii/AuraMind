@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Mental health focused color palette - calming pastels */
+    --background: 210 15% 97%;
+    --foreground: 215 25% 15%;
+
+    --card: 210 20% 98%;
+    --card-foreground: 215 25% 15%;
+
+    --popover: 210 20% 98%;
+    --popover-foreground: 215 25% 15%;
+
+    /* Calming blue-green primary */
+    --primary: 190 65% 45%;
+    --primary-foreground: 210 20% 98%;
+    --primary-soft: 190 45% 85%;
+
+    /* Gentle green secondary */
+    --secondary: 160 35% 88%;
+    --secondary-foreground: 160 35% 20%;
+
+    /* Soft muted tones */
+    --muted: 200 20% 94%;
+    --muted-foreground: 200 15% 40%;
+
+    /* Warm accent for highlights */
+    --accent: 280 30% 88%;
+    --accent-foreground: 280 30% 20%;
+
+    /* Mental health specific colors */
+    --wellness: 150 50% 75%;
+    --wellness-foreground: 150 50% 15%;
+    --calm: 210 50% 85%;
+    --calm-foreground: 210 50% 15%;
+    --support: 320 40% 85%;
+    --support-foreground: 320 40% 15%;
+
+    --destructive: 0 65% 65%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 200 25% 88%;
+    --input: 200 25% 90%;
+    --ring: 190 65% 45%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark theme with calming, mental health focused colors */
+    --background: 215 25% 8%;
+    --foreground: 210 15% 92%;
+
+    --card: 215 25% 10%;
+    --card-foreground: 210 15% 92%;
+
+    --popover: 215 25% 10%;
+    --popover-foreground: 210 15% 92%;
+
+    /* Softer primary for dark mode */
+    --primary: 190 55% 60%;
+    --primary-foreground: 215 25% 8%;
+    --primary-soft: 190 35% 25%;
+
+    /* Darker secondary with warmth */
+    --secondary: 160 25% 20%;
+    --secondary-foreground: 160 35% 85%;
+
+    /* Comfortable muted tones */
+    --muted: 200 15% 15%;
+    --muted-foreground: 200 10% 65%;
+
+    /* Gentle accent */
+    --accent: 280 20% 25%;
+    --accent-foreground: 280 30% 85%;
+
+    /* Mental health colors for dark mode */
+    --wellness: 150 40% 35%;
+    --wellness-foreground: 150 50% 85%;
+    --calm: 210 40% 35%;
+    --calm-foreground: 210 50% 85%;
+    --support: 320 30% 35%;
+    --support-foreground: 320 40% 85%;
+
+    --destructive: 0 55% 55%;
+    --destructive-foreground: 210 15% 92%;
+
+    --border: 200 15% 18%;
+    --input: 200 15% 15%;
+    --ring: 190 55% 60%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  /* Smooth transitions for theme switching */
+  * {
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* Mental health specific gradient backgrounds */
+  .gradient-wellness {
+    background: linear-gradient(135deg, hsl(var(--wellness)) 0%, hsl(var(--calm)) 100%);
+  }
+
+  .gradient-support {
+    background: linear-gradient(135deg, hsl(var(--support)) 0%, hsl(var(--primary-soft)) 100%);
+  }
+
+  .gradient-hero {
+    background: linear-gradient(135deg, hsl(var(--primary-soft)) 0%, hsl(var(--wellness)) 50%, hsl(var(--support)) 100%);
+  }
+
+  /* Calming animations */
+  .float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .pulse-soft {
+    animation: pulse-soft 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes pulse-soft {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+  }
+}
