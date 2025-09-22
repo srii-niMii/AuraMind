@@ -28,7 +28,7 @@ export default function Resources() {
     duration: '8 min read',
     language: 'Both',
     difficulty: 'Beginner',
-    url: 'https://www.apa.org/topics/anxiety'
+    url: 'https://www.apa.org/ed/schools/primer/anxiety'
   }, {
     id: '2',
     title: 'Breathing Techniques for Stress Relief',
@@ -37,7 +37,8 @@ export default function Resources() {
     category: 'stress',
     duration: '15 minutes',
     language: 'English',
-    difficulty: 'Beginner'
+    difficulty: 'Beginner',
+    url:'https://www.youtube.com/watch?v=LiUnFJ8P4gM'
   }, {
     id: '3',
     title: 'Sleep Hygiene for Better Mental Health',
@@ -46,7 +47,8 @@ export default function Resources() {
     category: 'sleep',
     duration: '12 minutes',
     language: 'Both',
-    difficulty: 'Beginner'
+    difficulty: 'Beginner',
+    url: 'https://www.youtube.com/watch?v=fk-_SwHhLLc'
   }, {
     id: '4',
     title: 'Progressive Muscle Relaxation',
@@ -227,7 +229,7 @@ export default function Resources() {
                       </div>
                       
                       <div className="flex gap-2">
-                        <Button className="flex-1" size="sm">
+                        <Button className="flex-1" size="sm" onClick={()=>resource.url && window.open(resource.url, '_blank')}>
                           <Play className="w-4 h-4 mr-2" />
                           {resource.type === 'article' ? 'Read' : resource.type === 'video' ? 'Watch' : resource.type === 'audio' ? 'Listen' : 'Start'}
                         </Button>
@@ -279,7 +281,7 @@ export default function Resources() {
                         <span className="text-sm text-muted-foreground">{resource.duration}</span>
                         <Badge variant="outline">{resource.language}</Badge>
                       </div>
-                      <Button className="w-full">
+                       <Button className="w-full" onClick={()=>resource.url && window.open(resource.url,'_blank')}>
                         <Play className="w-4 h-4 mr-2" />
                         Listen Now
                       </Button>
@@ -303,7 +305,7 @@ export default function Resources() {
                         <span className="text-sm text-muted-foreground">{resource.duration}</span>
                         <Badge variant="outline">{resource.language}</Badge>
                       </div>
-                      <Button className="w-full">
+                      <Button className="w-full" onClick={()=>resource.url && window.open(resource.url,'_blank')}>
                         <Play className="w-4 h-4 mr-2" />
                         Watch Video
                       </Button>
