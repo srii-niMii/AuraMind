@@ -28,7 +28,7 @@ export default function Resources() {
     duration: '8 min read',
     language: 'Both',
     difficulty: 'Beginner',
-    url: 'https://example.com/anxiety-guide'
+    url: 'https://www.apa.org/topics/anxiety'
   }, {
     id: '2',
     title: 'Breathing Techniques for Stress Relief',
@@ -318,7 +318,7 @@ export default function Resources() {
             <h2 className="text-2xl font-bold text-center mb-8">Featured This Week</h2>
             <div className="grid lg:grid-cols-2 gap-8">
               <Card className="bg-gradient-wellness">
-                <CardContent className="p-8 text-center bg-[#358ab0]">
+                <CardContent className="p-8 text-center bg-[#61BED1]">
                   <Brain className="w-16 h-16 mx-auto mb-4 text-white" />
                   <h3 className="text-2xl font-bold text-white mb-4">Mental Health Awareness Week</h3>
                   <p className="text-white/90 mb-6">
@@ -331,7 +331,7 @@ export default function Resources() {
               </Card>
 
               <Card className="bg-gradient-support">
-                <CardContent className="p-8 text-center bg-[#358ab0]">
+                <CardContent className="p-8 text-center bg-[#61BED1]">
                   <Heart className="w-16 h-16 mx-auto mb-4 text-white" />
                   <h3 className="text-2xl font-bold text-white mb-4">Crisis Support Resources</h3>
                   <p className="text-white/90 mb-6">

@@ -2,13 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+
 
 @layer base {
   :root {
-    /* Mental health focused color palette - calming pastels */
+    
     --background: 210 15% 97%;
     --foreground: 215 25% 15%;
 
@@ -18,24 +16,24 @@ All colors MUST be HSL.
     --popover: 210 20% 98%;
     --popover-foreground: 215 25% 15%;
 
-    /* Calming blue-green primary */
+    
     --primary: 190 65% 45%;
     --primary-foreground: 210 20% 98%;
     --primary-soft: 190 45% 85%;
 
-    /* Gentle green secondary */
+    
     --secondary: 160 35% 88%;
     --secondary-foreground: 160 35% 20%;
 
-    /* Soft muted tones */
+  
     --muted: 200 20% 94%;
     --muted-foreground: 200 15% 40%;
 
-    /* Warm accent for highlights */
+    
     --accent: 280 30% 88%;
     --accent-foreground: 280 30% 20%;
 
-    /* Mental health specific colors */
+    
     --wellness: 150 50% 75%;
     --wellness-foreground: 150 50% 15%;
     --calm: 210 50% 85%;
@@ -70,7 +68,7 @@ All colors MUST be HSL.
   }
 
   .dark {
-    /* Dark theme with calming, mental health focused colors */
+    
     --background: 215 25% 8%;
     --foreground: 210 15% 92%;
 
@@ -80,24 +78,24 @@ All colors MUST be HSL.
     --popover: 215 25% 10%;
     --popover-foreground: 210 15% 92%;
 
-    /* Softer primary for dark mode */
+    
     --primary: 190 55% 60%;
     --primary-foreground: 215 25% 8%;
     --primary-soft: 190 35% 25%;
 
-    /* Darker secondary with warmth */
+    
     --secondary: 160 25% 20%;
     --secondary-foreground: 160 35% 85%;
 
-    /* Comfortable muted tones */
+    
     --muted: 200 15% 15%;
     --muted-foreground: 200 10% 65%;
 
-    /* Gentle accent */
+    
     --accent: 280 20% 25%;
     --accent-foreground: 280 30% 85%;
 
-    /* Mental health colors for dark mode */
+    
     --wellness: 150 40% 35%;
     --wellness-foreground: 150 50% 85%;
     --calm: 210 40% 35%;

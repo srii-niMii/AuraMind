@@ -166,7 +166,7 @@ export default function Chat() {
             <CardHeader className="text-center">
               <div className="flex justify-center mb-4">
                 <div className="w-16 h-16 bg-gradient-wellness rounded-full flex items-center justify-center">
-                  <Bot className="w-8 h-8 text-white" />
+                  <Bot className="w-8 h-8 text-[#57c9e0]" />
                 </div>
               </div>
               <CardTitle className="text-2xl">AI Support Chat</CardTitle>

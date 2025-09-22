@@ -1,10 +1,12 @@
 import { Button } from "@/components/ui/button"
 import { useTheme } from "@/components/theme-provider"
-import { Moon, Sun, Heart, User, Calendar, MessageCircle, BookOpen, BarChart3 } from "lucide-react"
+import { Moon, Sun, Heart, User, Calendar, MessageCircle, BookOpen, BarChart3,LogOut} from "lucide-react"
 import { Link, useLocation } from "react-router-dom"
+import { useAuth } from "@/contexts/AuthContext";
 
 export function Header() {
   const { theme, setTheme } = useTheme()
+  const { user, logout } = useAuth();
   const location = useLocation()
 
   const navigation = [
@@ -57,12 +59,19 @@ export function Header() {
                 <Sun className="h-5 w-5" />
               )}
             </Button>
-            <Link to="/auth">
-              <Button variant="outline" size="sm" className="flex items-center space-x-2">
-                <User className="w-4 h-4" />
-                <span>Sign In</span>
+            <div className="flex items-center space-x-2">
+              <span className="text-sm text-muted-foreground hidden sm:inline">Welcome, {user?.name}</span>
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={logout}
+                className="flex items-center space-x-2"
+                title="Logout"
+              >
+                <LogOut className="w-4 h-4" />
+                <span className="hidden sm:inline">Logout</span>
               </Button>
-            </Link>
+            </div>
           </div>
         </div>
       </div>
